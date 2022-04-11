@@ -3,7 +3,7 @@ let Listing = require('../models/listing.model');
 
 router.route('/').get((req, res) => {
   Listing.find()
-    .then(exercises => res.json(exercises))
+    .then(listing => res.json(listing))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
